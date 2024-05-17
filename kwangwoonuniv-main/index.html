@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head> <!--제목-->
+  <meta charset="UTF-8">
+  <title>자리요!</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <div class="indicator"></div>
+
+    <nav>
+      <div>
+        <img src="img/logoText.png" width="150"> <!--좌측 상단 로고-->
+      </div>
+      <div class="nav-right">
+        <div class="active">Home</div> <!--우측 상단 HOME 아이콘-->
+        <div class="svg-container" id="user-icon" onclick="toggleMypage()"> <!--우측 상단 사용자 아이콘-->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <div id="demo"></div> <!--동적 콘텐츠-->
+
+        <!-- 사용자 아이콘 관련 -->
+        <div id="mypage" class="mypage">
+          <div class="mypage-header">
+            <h2 id="mypage-title"> <!-- JavaScript --> </h2>
+            <button id="closeMypage" class="close-btn" onclick="closeMypage()">×</button>
+          </div>
+          <div class="mypage-content" id="mypage-content">
+            <!-- JavaScript -->
+          </div>
+        </div>
+
+    <div class="details" id="details-even">
+      <div class="place-box">
+        <!--장소 정보-->
+        <div class="text"> </div>
+      </div>
+      <div class="title-box-1"><div class="title-1">자리요!</div></div>
+      <div class="title-box-2"><div class="title-2"> </div></div>
+      <div class="desc">
+        <!--설명 안 넣는 게 나을까요-->
+      </div>
+      <div class="cta">
+        <!--장소 발견 버튼-->
+        <button class="bookmark">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button class="discover" onclick="location.href='https://www.kw.ac.kr/ko/tour/tour01.jsp'">Discover Location</button>
+      </div>
+    </div>
+
+    <div class="details" id="details-odd">
+      <div class="place-box">
+        <!--장소 정보-->
+        <div class="text">광운대학교</div>
+      </div>
+      <div class="title-box-1"><div class="title-1"> </div></div>
+      <div class="title-box-2"><div class="title-2"></div></div>
+      <div class="desc">
+        서울시 노원구 광운로 20 (월계동 447-1) 광운대학교(01897) 
+      </div>
+      <div class="cta">
+        <!--즐겨찾기 버튼-->
+        <button class="bookmark">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <!--장소 발견 버튼-->
+        <button class="discover">Discover Location</button>
+      </div>
+    </div>
+
+    <div class="pagination" id="pagination">
+      <div class="arrow arrow-left"> <!--이전 슬라이드 버튼-->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </div>
+      <div class="arrow arrow-right"> <!--다음 슬라이드 버튼-->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </div>
+      <div class="progress-sub-container" >
+        <div class="progress-sub-background" >
+
+            <div class="progress-sub-foreground" ></div>
+            <!--슬라이드 진행 표시기-->
+        </div>
+    </div>
+    <div class="slide-numbers" id="slide-numbers"></div> <!--슬라이드 번호 표시-->
+    </div>
+
+    <div class="cover" ></div> <!--화면 덮개-->
+   
+
+   
+  </body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
