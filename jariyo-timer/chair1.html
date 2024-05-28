@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 자리 현황 및 이미지 모델</title>
+    <link rel="stylesheet" href="server.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest"></script>
+</head>
+<body>
+<div>Teachable Machine</div>
+<button type="button" onclick="init()">Start</button>
+
+<div id="webcam-container1"></div>
+<div id="webcam-container2"></div>
+<div id="webcam-container3"></div>
+<div id="webcam-container4"></div>
+
+<div id="label-container"></div>
+
+<div class="chair-container">
+    <div class="chair" id="chair1">1 <span class="timer" id="timer1"></span></div>
+    <div class="chair" id="chair2">2 <span class="timer" id="timer2"></span></div>
+    <div class="chair" id="chair3">3 <span class="timer" id="timer3"></span></div>
+    <div class="chair" id="chair4">4 <span class="timer" id="timer4"></span></div>
+</div>
+<script src="client.js"></script>
+</body>
+</html>

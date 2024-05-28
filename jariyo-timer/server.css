@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.chair-container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px); 
+    grid-template-rows: repeat(2, 150px); 
+    gap: 20px; 
+    margin: auto;
+}
+
+.chair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black; 
+    font-size: 24px;
+    color: black;
+    background-color: transparent;
+    width: 100%; 
+    height: 100%;
+}
+
+.chair.red {
+    background-color: #8A1601;
+    color: white;
+}
+
+.chair.gray {
+    background-color: gray;
+    color: black;
+}
